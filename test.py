@@ -14,13 +14,14 @@ if __name__ == '__main__':
 
     print('start pickling...')
 
-    with io.BytesIO() as buf:
-        p = Pickler(buf)
+    count = 99999
+    while count > 0:            
+        prepared_data.key = count
 
-        count = 999999
-        while count > 0:
-            prepared_data.key = count
+        with io.BytesIO() as buf:
+            p = Pickler(buf)
             p.dump(prepared_data)
-            count -= 1
+
+        count -= 1
 
     print('pickling done.')
