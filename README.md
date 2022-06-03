@@ -51,9 +51,11 @@ $ memray stats memray_trace.bin
         - <module>:/home/tigerinus/dev/tigerinus/pickle_memory_leak_with_msgspec/structs.py:32 -> 2
         - <module>:/home/tigerinus/dev/tigerinus/pickle_memory_leak_with_msgspec/structs.py:18 -> 2
 
-memray table memray_trace.bin -o memray_trace.html
+$ memray table memray_trace.bin -o memray_trace.html
+...
 
-open memray_trace.html
+$ open memray_trace.html
+...
 ```
 
 ## screenshot of captured memory leak
